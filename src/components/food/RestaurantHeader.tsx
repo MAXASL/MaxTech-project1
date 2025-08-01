@@ -30,24 +30,19 @@ const RestaurantHeader: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-8">
             <a href="#morning" className="text-sm font-medium hover:text-primary transition-colors">
-              Morning
+              Breakfast
             </a>
             <a href="#midday" className="text-sm font-medium hover:text-primary transition-colors">
-              Midday
+              Lunch
             </a>
             <a href="#dinner" className="text-sm font-medium hover:text-primary transition-colors">
               Dinner
             </a>
-            <div className="flex items-center gap-2 text-sm">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span>Lusaka, Zambia</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm">
-              <Clock className="w-4 h-4 text-primary" />
-              <span>6:00 AM - 10:00 PM</span>
-            </div>
+            <a href="#contact-section" className="text-sm font-medium hover:text-primary transition-colors">
+              Contact Us
+            </a>
           </nav>
 
           {/* Desktop Actions */}
@@ -81,40 +76,44 @@ const RestaurantHeader: React.FC = () => {
                 className="text-sm font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Morning Delights
+                Breakfast
               </a>
               <a 
                 href="#midday" 
                 className="text-sm font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Midday Favorites
+                Lunch
               </a>
               <a 
                 href="#dinner" 
                 className="text-sm font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Evening Specials
+                Dinner
+              </a>
+              <a 
+                href="#contact-section" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
               </a>
               
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span>Lusaka, Zambia</span>
+              <div className="border-t pt-4 space-y-2">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <MapPin className="w-4 h-4 text-primary" />
+                  <span>Lusaka, Zambia</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Phone className="w-4 h-4 text-primary" />
+                  <span>+260 123 456 789</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Clock className="w-4 h-4 text-primary" />
+                  <span>6:00 AM - 10:00 PM</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4 text-primary" />
-                <span>+260 XX XXX XXXX</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Clock className="w-4 h-4 text-primary" />
-                <span>6:00 AM - 10:00 PM</span>
-              </div>
-              
-              <Button variant="outline" onClick={handleContactClick} className="w-full">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Contact Us
-              </Button>
             </nav>
           </div>
         )}

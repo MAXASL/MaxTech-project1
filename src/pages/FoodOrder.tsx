@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sunrise, Sun, Moon, Phone, MapPin, Clock } from 'lucide-react';
 import RestaurantHeader from '@/components/food/RestaurantHeader';
+import RestaurantFooter from '@/components/food/RestaurantFooter';
 import MenuSection from '@/components/food/MenuSection';
 import { zambianFoods } from '@/data/zambianFoods';
 import { CartProvider } from '@/contexts/CartContext';
@@ -96,25 +97,7 @@ const FoodOrder: React.FC = () => {
           </section>
         </main>
 
-        {/* Footer */}
-        <footer className="bg-secondary py-8 mt-16">
-          <div className="container mx-auto px-4 text-center">
-            <h3 className="text-lg font-semibold mb-2">Zambian Delights Restaurant</h3>
-            <p className="text-muted-foreground mb-4">
-              Bringing you the authentic taste of Zambia since 2020
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>+260 XX XXX XXXX</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>Lusaka, Zambia</span>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <RestaurantFooter />
       </div>
     </CartProvider>
   );
