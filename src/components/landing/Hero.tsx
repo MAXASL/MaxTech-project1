@@ -20,7 +20,7 @@ const Hero = () => {
             I Build Amazing
             <br />
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Landing Pages
+              websites that function perfectly.
             </span>
           </h1>
           
