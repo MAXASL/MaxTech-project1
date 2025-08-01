@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sunrise, Sun, Moon, Phone, MapPin } from 'lucide-react';
+import { Sunrise, Sun, Moon, Phone, MapPin, Clock } from 'lucide-react';
 import RestaurantHeader from '@/components/food/RestaurantHeader';
 import MenuSection from '@/components/food/MenuSection';
 import { zambianFoods } from '@/data/zambianFoods';
@@ -44,13 +44,15 @@ const FoodOrder: React.FC = () => {
           </section>
 
           {/* Menu Sections */}
-          <MenuSection 
-            title="Morning Delights" 
-            foods={morningFoods}
-            icon={<Sunrise className="w-8 h-8 text-primary" />}
-          />
+          <div id="morning">
+            <MenuSection 
+              title="Morning Delights" 
+              foods={morningFoods}
+              icon={<Sunrise className="w-8 h-8 text-primary" />}
+            />
+          </div>
           
-          <div className="bg-muted/30">
+          <div id="midday" className="bg-muted/30">
             <MenuSection 
               title="Midday Favorites" 
               foods={middayFoods}
@@ -58,11 +60,40 @@ const FoodOrder: React.FC = () => {
             />
           </div>
           
-          <MenuSection 
-            title="Evening Specials" 
-            foods={dinnerFoods}
-            icon={<Moon className="w-8 h-8 text-primary" />}
-          />
+          <div id="dinner">
+            <MenuSection 
+              title="Evening Specials" 
+              foods={dinnerFoods}
+              icon={<Moon className="w-8 h-8 text-primary" />}
+            />
+          </div>
+
+          {/* Contact Section */}
+          <section id="contact-section" className="bg-secondary py-16">
+            <div className="container mx-auto px-4 text-center">
+              <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
+              <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="space-y-2">
+                  <Phone className="w-8 h-8 text-primary mx-auto" />
+                  <h3 className="font-semibold">Call Us</h3>
+                  <p className="text-muted-foreground">+260 XX XXX XXXX</p>
+                  <p className="text-sm text-muted-foreground">Available 6:00 AM - 10:00 PM</p>
+                </div>
+                <div className="space-y-2">
+                  <MapPin className="w-8 h-8 text-primary mx-auto" />
+                  <h3 className="font-semibold">Visit Us</h3>
+                  <p className="text-muted-foreground">Lusaka, Zambia</p>
+                  <p className="text-sm text-muted-foreground">Downtown Area</p>
+                </div>
+                <div className="space-y-2">
+                  <Clock className="w-8 h-8 text-primary mx-auto" />
+                  <h3 className="font-semibold">Opening Hours</h3>
+                  <p className="text-muted-foreground">Daily: 6:00 AM - 10:00 PM</p>
+                  <p className="text-sm text-muted-foreground">Fresh food all day</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
 
         {/* Footer */}

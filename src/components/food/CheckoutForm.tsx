@@ -5,7 +5,8 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ArrowLeft, CheckCircle } from 'lucide-react';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { ArrowLeft, CheckCircle, CreditCard, Smartphone, DollarSign } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
 
@@ -20,6 +21,8 @@ interface CustomerInfo {
   notes: string;
 }
 
+type PaymentMethod = 'cash' | 'mobile' | 'card';
+
 const CheckoutForm: React.FC<CheckoutFormProps> = ({ onBack }) => {
   const { items, total, clearCart } = useCart();
   const { toast } = useToast();
@@ -29,6 +32,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onBack }) => {
     address: '',
     notes: ''
   });
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('cash');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
@@ -141,6 +145,53 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onBack }) => {
                 placeholder="Any special requests or notes for your order"
               />
             </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Payment Method</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <RadioGroup value={paymentMethod} onValueChange={(value) => setPaymentMethod(value as PaymentMethod)}>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="cash" id="cash" />
+                <Label htmlFor="cash" className="flex items-center gap-2 cursor-pointer">
+                  <DollarSign className="w-4 h-4" />
+                  Cash on Delivery
+                </Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="mobile" id="mobile" />
+                <Label htmlFor="mobile" className="flex items-center gap-2 cursor-pointer">
+                  <Smartphone className="w-4 h-4" />
+                  Mobile Money (MTN/Airtel)
+                </Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="card" id="card" />
+                <Label htmlFor="card" className="flex items-center gap-2 cursor-pointer">
+                  <CreditCard className="w-4 h-4" />
+                  Credit/Debit Card
+                </Label>
+              </div>
+            </RadioGroup>
+            
+            {paymentMethod === 'mobile' && (
+              <div className="mt-4 p-4 bg-muted rounded-lg">
+                <p className="text-sm text-muted-foreground">
+                  You will receive SMS instructions for mobile money payment after placing your order.
+                </p>
+              </div>
+            )}
+            
+            {paymentMethod === 'card' && (
+              <div className="mt-4 p-4 bg-muted rounded-lg">
+                <p className="text-sm text-muted-foreground">
+                  Secure card payment will be processed after order confirmation.
+                </p>
+              </div>
+            )}
           </CardContent>
         </Card>
 
