@@ -5,10 +5,10 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "$9",
+    price: "$250",
     description: "Perfect for individuals getting started",
     features: [
-      "5 Landing Pages",
+      "simple websites",
       "Basic Templates",
       "Mobile Responsive",
       "Basic Analytics",
@@ -18,7 +18,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "$29",
+    price: "$650",
     description: "Best for growing businesses",
     features: [
       "Unlimited Landing Pages",
@@ -33,7 +33,7 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "$99",
+    price: "$800",
     description: "For large organizations",
     features: [
       "Everything in Professional",

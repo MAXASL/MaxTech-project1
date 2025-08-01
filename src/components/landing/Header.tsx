@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            LandingGlory
+            MaxTech dev
           </div>
           
           {/* Desktop Navigation */}

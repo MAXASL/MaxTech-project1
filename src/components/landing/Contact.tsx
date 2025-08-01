@@ -15,7 +15,7 @@ const Contact = () => {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions or need a custom solution? I’d love to hear from you. Reach out and I’ll respond promptly.
           </p>
         </div>
 
@@ -23,42 +23,42 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="border-0 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl">Send us a message</CardTitle>
+              <CardTitle className="text-2xl">Send me a message</CardTitle>
               <CardDescription>
-                Fill out the form below and we'll get back to you within 24 hours.
+                Fill out the form below and I’ll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">First Name</Label>
-                  <Input id="firstName" placeholder="John" />
+                  <Input id="firstName" placeholder="Your First Name" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="lastName">Last Name</Label>
-                  <Input id="lastName" placeholder="Doe" />
+                  <Input id="lastName" placeholder="Your Last Name" />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="john@example.com" />
+                <Input id="email" type="email" placeholder="you@example.com" />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="company">Company (Optional)</Label>
                 <Input id="company" placeholder="Your Company" />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Tell us about your project or ask us anything..."
+                <Textarea
+                  id="message"
+                  placeholder="Tell me about your project or inquiry..."
                   className="min-h-[120px]"
                 />
               </div>
-              
+
               <Button size="lg" className="w-full">
                 Send Message
               </Button>
@@ -68,40 +68,38 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Other ways to reach us</h3>
+              <h3 className="text-2xl font-bold mb-6">Other ways to reach me</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Email Us</h4>
-                    <p className="text-muted-foreground">hello@landingglory.com</p>
-                    <p className="text-muted-foreground">support@landingglory.com</p>
+                    <h4 className="font-semibold mb-1">Email Me</h4>
+                    <p className="text-muted-foreground">maxaslukwesa@gmail.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Call Us</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground">Mon-Fri 9AM-6PM EST</p>
+                    <h4 className="font-semibold mb-1">Call or WhatsApp</h4>
+                    <p className="text-muted-foreground">+260 766 629 184</p>
+                    <p className="text-sm text-muted-foreground">Available Mon–Sat, 9AM–6PM CAT</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Visit Us</h4>
+                    <h4 className="font-semibold mb-1">Location</h4>
                     <p className="text-muted-foreground">
-                      123 Innovation Drive<br />
-                      San Francisco, CA 94105<br />
-                      United States
+                      Copperbelt, Zambia<br />
+                      Available for remote work worldwide
                     </p>
                   </div>
                 </div>
@@ -110,11 +108,15 @@ const Contact = () => {
 
             <Card className="border-primary/20 bg-primary/5">
               <CardContent className="p-6">
-                <h4 className="font-semibold mb-2">Need immediate help?</h4>
+                <h4 className="font-semibold mb-2">Need urgent help?</h4>
                 <p className="text-muted-foreground mb-4">
-                  Check out our comprehensive help center with guides, tutorials, and FAQs.
+                  Reach out to me on WhatsApp for fast communication and quick support.
                 </p>
-                <Button variant="outline">Visit Help Center</Button>
+                <Button variant="outline" asChild>
+                  <a href="https://wa.me/260766629184" target="_blank" rel="noopener noreferrer">
+                    Message on WhatsApp
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           </div>

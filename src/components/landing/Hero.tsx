@@ -17,7 +17,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Build Amazing
+            I Build Amazing
             <br />
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Landing Pages
@@ -25,13 +25,13 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Create stunning, conversion-optimized landing pages in minutes. No coding required. 
+           I Create stunning, conversion-optimized websites in the clients required time. 
             Just beautiful designs that drive results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button size="lg" className="text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all">
-              Start Building Free
+              contact me I start building for you
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4">

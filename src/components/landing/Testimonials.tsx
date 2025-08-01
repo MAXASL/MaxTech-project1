@@ -4,51 +4,57 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Marketing Director",
-    company: "TechStart Inc.",
+    name: "Luanshya Municipal Council",
+    role: "Internship Supervisor",
+    company: "Luanshya Municipal Council",
     avatar: "",
-    content: "LandingGlory transformed our conversion rates. We saw a 300% increase in sign-ups within the first month. The templates are beautiful and the analytics are incredibly detailed.",
+    content:
+      "Maxas has played an essential role in maintaining and improving our software and hardware systems. His proactive approach to troubleshooting and automation has improved operational efficiency across departments.",
     rating: 5
   },
   {
-    name: "Michael Chen",
-    role: "Founder",
-    company: "GrowthLab",
+    name: "QA Lead",
+    role: "Quality Assurance",
+    company: "Luanshya Municipal Council",
     avatar: "",
-    content: "As a non-technical founder, I was amazed at how easy it was to create professional landing pages. The drag-and-drop editor is intuitive and the results speak for themselves.",
+    content:
+      "Maxas supported the QA team by logging and tracking over 80 issues across multiple projects. His attention to detail and documentation skills were critical to our debugging success.",
     rating: 5
   },
   {
-    name: "Emily Rodriguez",
-    role: "Product Manager",
-    company: "InnovateCorp",
+    name: "IT Department",
+    role: "Senior Technician",
+    company: "Luanshya Municipal Council",
     avatar: "",
-    content: "The A/B testing features have been game-changing for our campaigns. We can quickly test different variations and optimize for maximum conversions. Highly recommend!",
+    content:
+      "Maxas has been instrumental in streamlining internal tools using PHP and JavaScript. His contributions have accelerated our digital transformation initiatives.",
     rating: 5
   },
   {
-    name: "David Thompson",
-    role: "Digital Marketing Specialist",
-    company: "ScaleUp Agency",
+    name: "Mulungushi University",
+    role: "Lecturer – Computer Science",
+    company: "Mulungushi University",
     avatar: "",
-    content: "Managing multiple client campaigns has never been easier. The team collaboration features and white-label options make this perfect for agencies like ours.",
+    content:
+      "Throughout his studies, Maxas consistently demonstrated deep understanding of computer science concepts and real-world application. He’s a driven learner with hands-on skills.",
     rating: 5
   },
   {
-    name: "Lisa Wang",
-    role: "E-commerce Manager",
-    company: "ShopSmart",
+    name: "Internal Automation Team",
+    role: "Lead Developer",
+    company: "Luanshya Municipal Council",
     avatar: "",
-    content: "The mobile-responsive designs are fantastic. Our mobile conversion rates improved by 250% after switching to LandingGlory. The customer support is also top-notch.",
+    content:
+      "His assistance with automating internal processes and improving system installations across Windows, Linux, and Mac environments saved the department considerable time and effort.",
     rating: 5
   },
   {
-    name: "Alex Mitchell",
-    role: "Growth Hacker",
-    company: "StartupBoost",
+    name: "Supervisor",
+    role: "Systems Integration",
+    company: "Luanshya Municipal Council",
     avatar: "",
-    content: "The speed of the pages is incredible. Sub-second load times have significantly improved our SEO rankings and user experience. This platform is a must-have for any serious marketer.",
+    content:
+      "Maxas showcased strong teamwork, problem-solving, and technical skills during his internship, especially when integrating third-party APIs and managing system-wide updates.",
     rating: 5
   }
 ];
@@ -59,11 +65,11 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Loved by thousands of
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> marketers</span>
+            Trusted by teams and professionals at
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Luanshya Municipal Council</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our customers have to say about their experience.
+            See what mentors and team leads are saying about Maxas Lukwesa's skills, reliability, and impact.
           </p>
         </div>
 
@@ -76,16 +82,14 @@ const Testimonials = () => {
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   "{testimonial.content}"
                 </p>
-                
                 <div className="flex items-center">
                   <Avatar className="h-12 w-12 mr-4">
                     <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                     <AvatarFallback>
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      {testimonial.name.split(" ").map((n) => n[0]).join("")}
                     </AvatarFallback>
                   </Avatar>
                   <div>
