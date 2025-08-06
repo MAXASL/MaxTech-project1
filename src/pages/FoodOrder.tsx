@@ -3,6 +3,7 @@ import { Sunrise, Sun, Moon, Phone, MapPin, Clock } from 'lucide-react';
 import RestaurantHeader from '@/components/food/RestaurantHeader';
 import RestaurantFooter from '@/components/food/RestaurantFooter';
 import MenuSection from '@/components/food/MenuSection';
+import ReviewSection from '@/components/food/ReviewSection';
 import { zambianFoods } from '@/data/zambianFoods';
 import { CartProvider } from '@/contexts/CartContext';
 
@@ -68,6 +69,9 @@ const FoodOrder: React.FC = () => {
               icon={<Moon className="w-8 h-8 text-primary" />}
             />
           </div>
+
+          {/* Reviews Section */}
+          <ReviewSection />
 
           {/* Contact Section */}
           <section id="contact-section" className="bg-primary/5 py-16">
